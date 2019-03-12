@@ -1,0 +1,88 @@
+#functions
+start
+[string]Robottostring() {
+			string str = "Robot’s location x: " + x + " y: " + y;
+return str;
+}
+[string]Returnstring(){
+	string str = "";
+	return str;
+}
+[boolean]Setlocationx(float f){
+			    locationX = f;
+			    return locationX == f;
+}
+[boolean]Setlocationy(float f){
+			    locationY = f;
+			    return locationY == f;
+}
+[float]Getlocationx() {
+		      return locationX;
+}
+[float]Getlocationy() {
+		      return locationY;
+}
+[dir]Perceiveenvironment(float d) {
+			       float x = robot.Getlocationx();
+			       float y = robot.Getlocationy();
+			       dir robotsDirection;
+			       if (f == 90) {
+			       	  dir = north;
+				  } else if (f == 180) {
+				    dir = south;
+				    } else if (f == 0) {
+				      dir = west;
+				      } else if (f == 270) {
+				      	dir = east;
+					} else if (f>90 and f > 180) {
+					  dir = northwest;
+					  } else if (f > 0 and f < 90) {
+					    dir = northeast;
+					    } else if (f < 270 and f > 180) {
+					      dir = southwest;
+					      } else {
+					      	dir = southeast;
+						}
+						return dir;
+}
+# main
+[int]Main() {
+Robot robo; 
+string welcoming = “Welcome!”; 
+       Print(welcoming)
+       robo.Grab(box)
+       Print(“Enter distance to carry out”)
+       int distance;
+Scan(distance)
+robo.SendData(distance)
+Print(“Enter degrees  for rotation”)
+float r;
+Scan(r)
+robo.SendData(Perceiveenvironment(r))
+Print(“Tricky question…What is the value of PI?”)
+int answer;
+Scan(answer)
+float PI = 3.14;
+robo.Release(box)
+if(answer != PI)
+	  Print(“loser”)
+else
+	Print(“Everybody knows that”)
+	
+	robo.Turn(r)
+	robo.Move(east,distance)
+	int count = 5;
+	Print(robo.Robottostring())
+	while (count > 0) {
+	      Print(robotList[count-1].Robottostring())
+		count = count – 1;
+}
+return 0;
+}      
+stop
+
+#statements 
+robotList = list[5]; 
+float locationX;
+float locationY;
+dir defaultDir;

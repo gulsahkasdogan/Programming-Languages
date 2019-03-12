@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>CS315-PL Homework-1</h2>
+
+<p id="demo"></p>
+
+<script>
+var array1 = ["Gulsah", " Kasdogan", " CS"];
+document.getElementById("demo").innerHTML = array1;
+
+var array2 = ["Elif ", 20, 2016]; //elements can be different types 
+
+var array3 = {firstname: "Gulsah", lastname: "Kasdogan", age: 20, year: 2018};
+
+
+function myFunc(){
+//empty function
+}
+
+var array4 = [1,2,myFunc];
+
+document.getElementById("demo").innerHTML = array4[2];//function
+var result = "<h4> Array of same type items </h4>" + 
+"Array1: " + array1 + '<br>' + 
+            
+            "<h4> Array of different type items </h4>" +
+"Array2: " + array2 + '<br>'+
+            
+            "<h4> Members can be accesed by names </h4>" +
+            "Array3: " + array3["firstname"] + " " + array3["lastname"] + " " +
+            array3["age"] + " " + array3["year"] + '<br>' +
+            
+            "<h4> Functions can be array members </h4>"+
+            "Array4: " + array4 + '<br>'
+            ;
+            
+
+document.getElementById("demo").innerHTML = result;//function
+
+
+</script>
+
+</body>
+</html>

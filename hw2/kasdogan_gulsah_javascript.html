@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Loops</h2>
+
+<p id="demo"></p>
+
+<script>
+
+var result = " ";
+
+var result2 = '<br>' + "Can control varible change inside loop? " + '<br>';
+var result1 = '<br>' + "Float for loop variable: " + '<br>' ;
+var string = "gulsah";
+var result3 = '<br>' + "Iterate characters from b to j in for loop" +'<br>';
+
+var i;
+for (i = 0; i < 2.1; i= i+0.1) {
+  //result1 += i.toString(10) + " ";
+}
+
+result1 += "Float gives wrong results thus they are commented <br>";
+
+for(i = 0; i<10; i++){
+		 i++;
+		 result2 += " " + i;
+}
+
+
+for(var ch = 'b'.charCodeAt(0); ch <= 'j'.charCodeAt(0); ch++ ) {
+				      result3 += String.fromCharCode(ch) + " ";
+}
+
+result2 += '<br>' + "What about function scope, can you reach i?" + '<br>' + i; //i = 10
+
+result += result1 + result2 + result3 + "<br>" ;
+
+
+var text = " ";
+
+var loopVar1 = 9;
+function func(){
+				      for(var loopVar1 = 0; loopVar1 < 5; loopVar1++){
+								       text += loopVar1 + " ";
+    }
+}
+
+func();
+
+text += "<br>loop var is not 5 it is " + loopVar1 +" because of the function scope";
+
+result += text;
+
+result4  = "";
+//-----------------------------
+//check evaluation 
+
+function randomGen(){
+								       result4 += "<br> I am evaluated ! <br>";
+								       return 15;
+}
+
+for(var i = 10; i<randomGen(); i++){
+			       result4 += i + " ";
+}
+
+result += "<br>" + result4;
+
+document.getElementById("demo").innerHTML = result;
+</script>
+
+</body>
+</html>
